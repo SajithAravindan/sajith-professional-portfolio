@@ -37,20 +37,11 @@ THEN I am presented with a responsive layout that adapts to my viewport
 ```
 
 
-## Mock-Up
-
-The following animation shows the web application's appearance and functionality:
-
-![portfolio demo](./Assets/02-advanced-css-homework-demo.gif)
-
-
 ## Review
 
-You are required to submit BOTH of the following for review:
+* Deployed Application URL:
 
-* The URL of the deployed application.
-
-* The URL of the GitHub repository that contains your code. Give the repository a unique name and include a README file that describes the project.
+*GitHub Repository:
 
 - - -
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+© 2023 Confidential and Proprietary. All Rights Reserved.

@@ -1,7 +1,5 @@
 
 /* 
-- Reworked the CSS to make it more efficient by consolidating CSS selectors 
-and properties, organizing them to follow the semantic structure of the HTML elements. 
 - Created Date: 07/08/2023
 - Credted by Sajith Aravindan
 
@@ -9,47 +7,38 @@ and properties, organizing them to follow the semantic structure of the HTML ele
 
 */
 
-/* Variables */
+/* Global Variables */
 :root {
     --HeaderColor:#31343D;
     --white: #ffffff;
     --boxbordercolor: #91CBCD;
-    --bordervar50: 50px;
-    --bordervar0: 0px;
-  }
+}
 
+/* Global Styling  */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-
-
-/* Body Section of the page CSS */
+/* Full Body Section Styling */
 body {
     background-color:var(--white);
+    font-family: Helvetica, Arial, sans-serif;
 }
+/* End of Full Body Section Styling */
 
-/* All <p> tag CSS */
-p {
-    font-size: 16px;
-    font-family: 'Helvitica','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-    color: var(--HeaderColor);
-}
-
-/* Header Section of the page CSS */
+/* Header Section CSS */
 header {   
     display: flex;    
     padding: 0px 20px 20px 0px;
-    font-family: 'Arial','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:Helvetica, Arial, sans-serif;
     background-color: var(--HeaderColor);
     color:var(--white);
     width: 100%;
 }
 
-/* Logo Section of the page CSS */
+/* Logo Section CSS */
 
 header .logo {      
     justify-content: center;
@@ -61,8 +50,7 @@ header .logo {
     color: var(--HeaderColor);
 }
 
-
-/* Navigation Section of the page CSS */
+/* Navigation Section CSS */
 header nav {
     display: flex;    
     justify-content: flex-end;
@@ -82,7 +70,7 @@ header nav {
     color: #fff;
   } 
 
-/* Main picture CSS */
+/* Banner picture CSS */
 figure {     
     height: 300px;
     width: 100%;
@@ -92,6 +80,7 @@ figure {
     background-position: center;    
 }
 
+/* Banner picture Subtitle CSS */
 figure .Subtitle {         
     padding: 20px 20px 20px 20px;   
     font-size: 38px;
@@ -102,120 +91,248 @@ figure .Subtitle {
     margin-top: 200px;
 }
 
-/* Article Part CSS */
-article{
-    display: flex; 
-    width: 100%;  
-}
-
-/* Sections under Article CSS */
-article .left-nav {
-    margin-bottom: 20px;
-    width: 20%;      
-    padding: 10px;   
-    background-color:var(--white);       
-    border-right-style: solid;
-    border-color: var(--HeaderColor);
-    border-width: thick;
-}
-
-/* CSS for all H2 Tags in Sections */
-article section h2 {
-    margin-bottom: 20px;
-    text-align: right;
-    font-family: 'Helvitica','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 48px;
-    color: var(--HeaderColor);
-}
-
- .content {
-    margin-bottom: 20px;
-    width: 80%;         
-    flex-wrap: wrap;
-    padding-left: 10px;   
-    text-align:justify;
-    background-color:var(--white);    
-}
-
-/* CSS for images positioning in Sections */
+/* CSS for Profile image */
 .profile-pic {
-    float: left;
+    margin: 0 auto 0 auto;
     max-height: 250px; 
-    margin-right: 25px;
+    width: 250px;
+    margin: 0 1% 2% 1%;
     border-style: solid;
     border-width: 1px;
     padding: 10px;     
     box-shadow: 10px 5px 5px 5px black, 10px 5px 5px 5px gray;
-    border-radius: 25px;     
+    border-radius: 25px;         
 }
 
-.firstjob {       
-    margin-right: 25px;
-    position: relative;       
+/* Sections Content Styling */
+.section {
+    background-color:var(--white);  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;    
 }
 
-.firstjob .Subtitle {         
-    padding: 20px 20px 20px 20px;   
-    font-size: 38px;
-    background-color:var(--boxbordercolor);
-    color: var(--HeaderColor);      
-    position: absolute; 
-    margin-top: 400px;   
-}
 
-.firstjob img {  
-    opacity: .5; 
-    float: left;
-    width: 100%;    
-    border-style: solid;
-    border-color: var(--boxbordercolor);
-    border-width: 5px;      
-    box-shadow: 10px 5px 5px 5px black, 10px 5px 5px 5px gray;     
-    margin-bottom: 15px;      
-}
-
-.firstjob:hover img {
-    opacity: 1;
-  }
-
-
-.nextjob {       
-    margin-right: 25px;     
-}
-.nextjob img {  
-    opacity: .5;
-    height: auto;
-    margin: 1%; 
-    float: left;
-    width: 48%;    
-    border-style: solid;
-    border-color: var(--boxbordercolor);
-    border-width: 5px;    
-    box-shadow: 10px 5px 5px 5px black, 10px 5px 5px 5px gray;      
-}
-
-.nextjob:hover img {
-    opacity: 1;
-  }
-
-  .aboutme {
-    display: flex;    
-    justify-content: flex-start;
-    width: 75%; 
-    align-items: left;  
-  }
-
-  .aboutme a {
+/* Sections Titles' Styling */
+.section-title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    font-size: 55px;
     color: var(--HeaderColor);
-    padding: 20px 20px;
-    font-size: 28px;    
-    text-decoration: underline;
-    text-align: center;
-  }
+    margin: 0 auto 0 auto;
+    padding-right: 15px;
+    width: 20%;
+    text-align: end;
+    border-right: var(--HeaderColor) solid 5px;
+}
 
-@media screen and (max-width: 1000px) {
-   header,  
+
+/* "About Me" Section Contents' Styling */
+.aboutme-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto 0 auto;
+    width: 80%;    
+}
+
+/* "Work" Section Content Stlyling */
+.works-row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto 0 auto;
+    width: 80%;
+    
+}
+
+/* "Contact Me" Section Contents' Styling */
+.contact-me-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto 0 auto;
+    width: 80%;
+}
+
+/* Section Font and Anchor Elements Styling */
+.section p, .section a {
+    line-height: 1.5;    
+    color: var(--HeaderColor); 
+    width: 80%;
+    margin: 0 auto;
+    font-size: 30px;
+    text-align: left;    
+}
+
+/* <p> tag Styling */
+.aboutme-row p{
+    font-size: 20px;
+    color: var(--HeaderColor); 
+    align-items: left;
+    margin: 0 auto 0 auto;     
+}
+
+.works-row p {
+    display: inline-block;
+    text-align: start;
+    background-color:var(--boxbordercolor);
+    opacity: 85%;
+    width: 45%;
+    position: absolute;
+    bottom: 10%;
+    left: 0%;
+}
+
+/* Main Project Section Styling */
+.first-project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 0 auto;
+    height: 650px;
+    width: 100%;
+}
+
+/* Others Projects Section Styling */
+.upcoming-projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto 0 auto;
+    flex-direction: row;
+    width: 100%;
+}
+
+/* Main Project  Section-Image Styling */
+.horiseon { 
+    width: 100%;
+    height: 610px;
+    margin: 0 1% 2% 1%;
+    border: var(--boxbordercolor) 5px solid;
+    position: relative;    
+}
+
+.horiseon img { 
+    width: 100%;
+    height: 600px;    
+    opacity: .5;
+}
+
+/* Main Project Hover Styling */
+.horiseon img:hover {
+    opacity: 1;
+}
+
+/* LED Wall  Section-Image Styling */
+.led-wall {    
+    width: 47.5%;
+    height: 310px;
+    margin-bottom: 2%;
+    margin-right: 0.5%;
+    border: var(--boxbordercolor) 5px solid;
+    position: relative;    
+}
+
+.led-wall img {
+    width: 100%;
+    height: 300px;
+    opacity: .5;
+}
+
+/* LED Wall Hover Styling */
+.led-wall img:hover {
+    opacity: 1;
+}
+
+/* Calculator  Section-Image Styling */
+.calculator {   
+    width: 47.5%;
+    height: 310px;
+    margin-bottom: 2%;
+    margin-left: 0.5%;
+    border: var(--boxbordercolor) 5px solid;
+    position: relative;     
+}
+
+.calculator img {
+    width: 100%;
+    height: 300px;
+    opacity: .5;
+}
+
+/* Calculator Hover Styling */
+.calculator img:hover {
+    opacity: 1;
+}
+
+/* Pastel Puzzle  Section-Image Styling */
+.pastel-puzzles {    
+    width: 47.5%;
+    height: 310px;
+    margin-bottom: 2%;
+    margin-right: 0.5%;
+    border: var(--boxbordercolor) 5px solid;
+    position: relative;    
+}
+
+.pastel-puzzles img {
+    width: 100%;
+    height: 300px;
+    opacity: .5;
+}
+
+/* Pastel Puzzle Hover Styling */
+.pastel-puzzles img:hover {
+    opacity: 1;
+}
+
+/* Run Buddy Section-Image Styling */
+.run-buddy {    
+    width: 47.5%;
+    height: 310px;
+    margin-bottom: 2%;
+    margin-left: 0.5%;
+    border: var(--boxbordercolor) 5px solid;
+    position: relative;   
+}
+
+.run-buddy img {
+    width: 100%;
+    height: 300px;
+    opacity: .5;
+}
+
+/* Run Buddy Hover Styling */
+.run-buddy img:hover {
+    opacity: 1;
+}
+/* End of Main Sections Content Styling */
+
+/* MEDIA QUERY FOR SMALLER SCREENS*/
+@media screen and (max-width: 1000px) {    
+
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+    }
+    
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+
     nav {
         flex-direction: column;       
     }
+
 }
