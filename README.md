@@ -39,9 +39,9 @@ THEN I am presented with a responsive layout that adapts to my viewport
 
 ## Review
 
-* Deployed Application URL:
+* Deployed Application URL: https://sajitharavindan.github.io/sajith-professional-portfolio/
 
-*GitHub Repository:
+* GitHub Repository: https://github.com/SajithAravindan/sajith-professional-portfolio.git
 
-- - -
+- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -
 © 2023 Confidential and Proprietary. All Rights Reserved.
